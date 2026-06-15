@@ -6,17 +6,18 @@
     <title>Dr. Stafford Geddes | Consultant Anaesthetist Legacy</title>
     <meta name="description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
 
-    <!-- Google Site Verification Link -->
+    <!-- Google Site Verification Tag for Search Console -->
     <meta name="google-site-verification" content="google3bafb564968c6e31" />
 
     <!-- Favicon Link -->
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://drjohnsgeddes.github.io/stafford-geddes/">
 
-    <!-- Hidden Search Engine Optimization Links (No visible footer link needed) -->
+    <!-- Hidden Search Engine Optimization Links -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
     <!-- Open Graph / Facebook -->
@@ -68,149 +69,40 @@
     }
     </script>
 
-    <!-- Font Awesome (for header icons, matching companion archive) -->
+    <!-- Font Awesome (for header icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            margin: 0;
-            padding: 0;
-            background-color: #f6f8fa;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; margin: 0; padding: 0; background-color: #f6f8fa; }
         
-        /* Matching Popsie's Page Banner Architecture */
-        .blue-banner-top {
-            position: relative;
-            background-color: #1e5bb8; /* Matching the vibrant royal blue color */
-            color: white;
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-bottom: 5px solid #164da0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-        }
+        .blue-banner-top { position: relative; background-color: #1e5bb8; color: white; text-align: center; padding: 60px 20px 40px; border-bottom: 5px solid #164da0; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
+        .banner-title { font-weight: bold; font-size: 3em; letter-spacing: 0.5px; margin: 0; z-index: 2; position: relative; }
+        .banner-dates { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; z-index: 2; position: relative; }
+        .banner-tagline { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; font-style: italic; z-index: 2; position: relative; }
+
+        .header-icon-left, .header-icon-right { position: absolute; top: 50%; transform: translateY(-50%); font-size: 5em; color: #ffffff; opacity: 0.25; z-index: 1; }
+        .header-icon-left { left: 40px; }
+        .header-icon-right { right: 40px; }
         
-        .banner-title {
-            font-weight: bold;
-            font-size: 3em;
-            letter-spacing: 0.5px;
-            margin: 0;
-            z-index: 2;
-            position: relative;
-        }
-
-        .banner-dates {
-            font-size: 1.4em;
-            margin: 10px 0 0;
-            opacity: 0.9;
-            z-index: 2;
-            position: relative;
-        }
-
-        .banner-tagline {
-            font-size: 1.4em;
-            margin: 10px 0 0;
-            opacity: 0.9;
-            font-style: italic;
-            z-index: 2;
-            position: relative;
-        }
-
-        /* Fixed absolute desktop positions with subtle 0.25 watermark opacity */
-        .header-icon-left,
-        .header-icon-right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 5em;
-            color: #ffffff;
-            opacity: 0.25;
-            z-index: 1;
-        }
-
-        .header-icon-left {
-            left: 40px;
-        }
-
-        .header-icon-right {
-            right: 40px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            border: 1px solid #e1e4e8;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         
         h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; color: #1e5bb8; font-size: 28px; }
         h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; color: #1e5bb8; font-size: 22px; }
         h3 { color: #24292e; font-size: 18px; margin-top: 20px; }
         
-        /* Fixed Case-Sensitive Image Placement */
-        .profile-pic {
-            float: right;
-            margin: 0 0 20px 20px;
-            border: 3px solid #1e5bb8;
-            border-radius: 6px;
-            max-width: 240px;
-            height: auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
+        .profile-pic { float: right; margin: 0 0 20px 20px; border: 3px solid #1e5bb8; border-radius: 6px; max-width: 240px; height: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .clear { clear: both; }
         
-        /* Polished Bottom Footer Section with Legacy Connection */
-        footer {
-            background-color: #1e5bb8;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 60px;
-            border-top: 5px solid #164da0;
-            letter-spacing: 0.5px;
-        }
-        footer a {
-            color: #bbdefb;
-            text-decoration: underline;
-            font-weight: bold;
-        }
+        footer { background-color: #1e5bb8; color: white; text-align: center; padding: 20px; font-size: 14px; margin-top: 60px; border-top: 5px solid #164da0; letter-spacing: 0.5px; }
+        footer a { color: #bbdefb; text-decoration: underline; font-weight: bold; }
 
-        /* Responsive Breakpoint matching Popsie's page */
         @media (max-width: 600px) {
-            .blue-banner-top {
-                padding: 30px 15px 30px;
-            }
-            .banner-title {
-                font-size: 2.2em;
-                margin-top: 15px;
-            }
-            .banner-dates,
-            .banner-tagline {
-                font-size: 1.1em;
-            }
-            .header-icon-left,
-            .header-icon-right {
-                position: static;
-                transform: none;
-                font-size: 2.2em;
-                opacity: 0.8;
-                margin: 5px;
-            }
-            .icon-wrapper {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
+            .blue-banner-top { padding: 30px 15px 30px; }
+            .banner-title { font-size: 2.2em; margin-top: 15px; }
+            .banner-dates { font-size: 1.1em; }
+            .banner-tagline { font-size: 1.1em; }
+            .header-icon-left, .header-icon-right { position: static; transform: none; font-size: 2.2em; opacity: 0.8; margin: 5px; }
+            .icon-wrapper { display: flex; justify-content: center; gap: 20px; }
         }
     </style>
 </head>
@@ -222,7 +114,6 @@
             <i class="fas fa-stethoscope header-icon-left"></i>
             <i class="fas fa-heart-pulse header-icon-right"></i>
         </div>
-
         <div class="banner-title">Dr. Stafford Geddes Archive</div>
         <div class="banner-dates">24 January 1891 – 14 May 1969</div>
         <div class="banner-tagline">1st Dedicated Anaesthetist on the Island of Ireland</div>
