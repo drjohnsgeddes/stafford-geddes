@@ -6,9 +6,12 @@
     <title>Dr. Stafford Geddes | Consultant Anaesthetist Legacy</title>
     <meta name="description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
     
-    <!-- Favicon Links -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+    <!-- Hidden Search Engine Optimization Links (No visible footer link needed) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
     <!-- Google Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">
@@ -35,62 +38,122 @@
             padding: 0;
             background-color: #f6f8fa;
         }
-        /* Top Banner & Border Theme */
+        
+        /* Matching Popsie's Page Banner Architecture */
         .blue-banner-top {
-            background-color: #0d47a1;
+            position: relative;
+            background-color: #1e5bb8; /* Matching the vibrant royal blue color */
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 5px solid #1565c0;
+            border-bottom: 5px solid #164da0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60px;
         }
-        .banner-symbols {
-            font-size: 24px;
-            margin-top: 5px;
+        
+        .banner-title {
+            font-weight: bold;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+            max-width: 60%;
+            z-index: 2;
         }
+
+        /* SVG Vector Corner Icons matching Popsie's layout exactly */
+        .header-icon-left {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            opacity: 0.85;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .header-icon-right {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            opacity: 0.85;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
         .container {
             max-width: 800px;
-            margin: 30px auto;
+            margin: 40px auto;
             background: white;
             padding: 40px;
             border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; color: #0d47a1; }
-        h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; color: #1565c0; }
+        
+        h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; color: #1e5bb8; font-size: 28px; }
+        h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; color: #1e5bb8; font-size: 22px; }
+        h3 { color: #24292e; font-size: 18px; margin-top: 20px; }
+        
+        /* Fixed Case-Sensitive Image Placement */
         .profile-pic {
             float: right;
             margin: 0 0 20px 20px;
-            border: 3px solid #0d47a1;
-            border-radius: 4px;
-            max-width: 220px;
+            border: 3px solid #1e5bb8;
+            border-radius: 6px;
+            max-width: 240px;
             height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
+        
         .clear { clear: both; }
-        /* Bottom Blue Border & Footer */
+        
+        /* Polished Bottom Footer Section */
         footer {
-            background-color: #0d47a1;
+            background-color: #1e5bb8;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             font-size: 14px;
-            margin-top: 40px;
-            border-top: 5px solid #1565c0;
+            margin-top: 60px;
+            border-top: 5px solid #164da0;
+            letter-spacing: 0.5px;
         }
-        footer a { color: #bbdefb; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <!-- Custom Top Header Box (Stethoscope & Heart/Harp concept) -->
+    <!-- Precision Header Box with Embedded Medical Graphics -->
     <div class="blue-banner-top">
-        <div style="font-weight: bold; font-size: 20px; letter-spacing: 1px;">DR. STAFFORD GEDDES ARCHIVE</div>
-        <div class="banner-symbols">🩺 🫀 🎵</div>
+        <!-- Left Corner: Faint White Medical Stethoscope Vector -->
+        <svg class="header-icon-left" viewBox="0 0 24 24">
+            <path d="M4.5 16.5c-1.5 0-2.5-1-2.5-2.5v-3c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5v3c0 1.5-1 2.5-2.5 2.5M7.5 5.5v11M16 11h3.5a2.5 2.5 0 0 1 0 5H16z"/>
+            <circle cx="7.5" cy="18.5" r="2"/>
+            <circle cx="16" cy="11" r="1.5"/>
+        </svg>
+
+        <div class="banner-title">Dr. Stafford Geddes Archive</div>
+
+        <!-- Right Corner: Faint White Heart Rhythm Vector -->
+        <svg class="header-icon-right" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
     </div>
 
     <div class="container">
-        <!-- Granddad's Portrait -->
-        <img src="portrait.jpg" alt="Dr. Stafford Geddes" class="profile-pic">
+        <!-- Granddad's Portrait (Case Sensitivity Fixed to match StaffordGeddes.jpg exactly) -->
+        <img src="StaffordGeddes.jpg" alt="Dr. Stafford Geddes" class="profile-pic">
 
         <h1>Dr. Stafford Geddes (Consultant Anaesthetist)</h1>
         <p><strong>A Legacy of Medical Contribution in Northern Ireland</strong></p>
@@ -122,9 +185,9 @@
         </ul>
     </div>
 
-    <!-- Blue Footer Box -->
+    <!-- Clean, Streamlined Footer -->
     <footer>
-        &copy; 2026 Dr. John Stafford Geddes Archive. All Rights Reserved. | <a href="sitemap.xml">Sitemap</a>
+        &copy; 2026 Dr. John Stafford Geddes Archive. All Rights Reserved.
     </footer>
 
 </body>
