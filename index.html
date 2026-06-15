@@ -5,29 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Stafford Geddes | Consultant Anaesthetist Legacy</title>
     <meta name="description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
-    
+
     <!-- Favicon Link -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://drjohnsgeddes.github.io/stafford-geddes/">
+
     <!-- Hidden Search Engine Optimization Links (No visible footer link needed) -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Dr. Stafford Geddes | Consultant Anaesthetist Legacy">
+    <meta property="og:description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
+    <meta property="og:url" content="https://drjohnsgeddes.github.io/stafford-geddes/">
+    <meta property="og:image" content="https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Stafford Geddes | Consultant Anaesthetist Legacy">
+    <meta name="twitter:description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
+    <meta name="twitter:image" content="https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg">
 
     <!-- Google Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Dr. Stafford Geddes Archive",
-      "description": "Historical archive of Consultant Anaesthetist Dr. Stafford Geddes at the Royal Victoria Hospital.",
-      "url": "https://drjohnsgeddes.github.io/stafford-geddes/",
-      "knowsAbout": ["Anaesthetist", "Medicine", "Royal Victoria Hospital", "Barbiturate Poisoning Treatment"],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Royal Victoria Hospital, Belfast"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://drjohnsgeddes.github.io/stafford-geddes/",
+          "name": "Dr. Stafford Geddes Archive",
+          "description": "Historical archive of Consultant Anaesthetist Dr. Stafford Geddes at the Royal Victoria Hospital."
+        },
+        {
+          "@type": "Person",
+          "name": "Stafford Geddes",
+          "givenName": "William",
+          "additionalName": "Billy",
+          "alternateName": ["William Stafford Geddes", "Billy Stafford Geddes", "Dr. Stafford Geddes"],
+          "jobTitle": "Consultant Anaesthetist",
+          "description": "Consultant Anaesthetist at the Royal Victoria Hospital, Belfast, and author of early clinical research on barbiturate poisoning. Born William Stafford Geddes, known to family as 'Billy' and professionally as Stafford Geddes.",
+          "url": "https://drjohnsgeddes.github.io/stafford-geddes/",
+          "image": "https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg",
+          "knowsAbout": ["Anaesthesia", "Medicine", "Royal Victoria Hospital", "Barbiturate Poisoning Treatment"],
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "Royal Victoria Hospital, Belfast"
+          },
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q140157943"
+          ]
+        }
+      ]
     }
     </script>
+
+    <!-- Font Awesome (for header icons, matching companion archive) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
@@ -42,7 +79,7 @@
         /* Matching Popsie's Page Banner Architecture */
         .blue-banner-top {
             position: relative;
-            background-color: #1e5bb8; /* Matching the vibrant royal blue color */
+            background-color: #1e5bb8;
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -61,35 +98,24 @@
             z-index: 2;
         }
 
-        /* SVG Vector Corner Icons matching Popsie's layout exactly */
-        .header-icon-left {
+        /* Icons matching Popsie's page exactly (Font Awesome stethoscope & heart-pulse) */
+        .header-icon-left,
+        .header-icon-right {
             position: absolute;
-            left: 30px;
             top: 50%;
             transform: translateY(-50%);
-            width: 55px;
-            height: 55px;
+            font-size: 48px;
+            color: #ffffff;
             opacity: 0.85;
-            fill: none;
-            stroke: #ffffff;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+            z-index: 2;
+        }
+
+        .header-icon-left {
+            left: 30px;
         }
 
         .header-icon-right {
-            position: absolute;
             right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 55px;
-            height: 55px;
-            opacity: 0.85;
-            fill: none;
-            stroke: #ffffff;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
         }
         
         .container {
@@ -119,7 +145,7 @@
         
         .clear { clear: both; }
         
-        /* Polished Bottom Footer Section */
+        /* Polished Bottom Footer Section with Legacy Connection */
         footer {
             background-color: #1e5bb8;
             color: white;
@@ -130,25 +156,24 @@
             border-top: 5px solid #164da0;
             letter-spacing: 0.5px;
         }
+        footer a {
+            color: #bbdefb;
+            text-decoration: underline;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <!-- Precision Header Box with Embedded Medical Graphics -->
     <div class="blue-banner-top">
-        <!-- Left Corner: Faint White Medical Stethoscope Vector -->
-        <svg class="header-icon-left" viewBox="0 0 24 24">
-            <path d="M4.5 16.5c-1.5 0-2.5-1-2.5-2.5v-3c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5v3c0 1.5-1 2.5-2.5 2.5M7.5 5.5v11M16 11h3.5a2.5 2.5 0 0 1 0 5H16z"/>
-            <circle cx="7.5" cy="18.5" r="2"/>
-            <circle cx="16" cy="11" r="1.5"/>
-        </svg>
+        <!-- Left Corner: Stethoscope (matches companion archive) -->
+        <i class="fas fa-stethoscope header-icon-left"></i>
 
         <div class="banner-title">Dr. Stafford Geddes Archive</div>
 
-        <!-- Right Corner: Faint White Heart Rhythm Vector -->
-        <svg class="header-icon-right" viewBox="0 0 24 24">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        </svg>
+        <!-- Right Corner: Heart Pulse (matches companion archive) -->
+        <i class="fas fa-heart-pulse header-icon-right"></i>
     </div>
 
     <div class="container">
@@ -157,6 +182,7 @@
 
         <h1>Dr. Stafford Geddes (Consultant Anaesthetist)</h1>
         <p><strong>A Legacy of Medical Contribution in Northern Ireland</strong></p>
+        <p><em>Born William Stafford Geddes — known to family and friends as "Billy," and professionally throughout his medical career as Stafford Geddes.</em></p>
 
         <h2>Professional Career & Affiliations</h2>
         <ul>
@@ -173,7 +199,7 @@
         <p>Beyond his daily theatre duties, Dr. Geddes actively contributed to early medical literature, focusing on critical care and toxicology. Notably, he published foundational work in <em>The British Medical Journal</em> (BMJ) regarding the clinical treatment and management of acute barbiturate poisoning—a severe and recurring medical emergency in mid-20th-century medicine.</p>
 
         <h3>A Lasting Medical Legacy</h3>
-        <p>In addition to his direct clinical impact, Dr. Geddes established a profound family legacy within international medicine. He was the father of <strong>Dr. John Stafford Geddes</strong> (1939–2024), the pioneering Northern Irish cardiologist who, alongside Professor Frank Pantridge at the Royal Victoria Hospital, co-developed the world's first mobile coronary care unit (the Belfast "Flying Squad") and revolutionized pre-hospital cardiac care with the portable defibrillator. Dr. Stafford Geddes’ long-standing career and esteemed reputation at the Royal Victoria Hospital helped pave a path for this next generation of historic medical breakthrough.</p>
+        <p>In addition to his direct clinical impact, Dr. Geddes established a profound family legacy within international medicine. He was the father of <strong>Dr. John Stafford Geddes</strong> (1939–2024), the pioneering Northern Irish cardiologist who, alongside Professor Frank Pantridge at the Royal Victoria Hospital, co-developed the world's first mobile coronary care unit (the Belfast "Flying Squad") and revolutionized pre-hospital cardiac care with the portable defibrillator. Dr. Stafford Geddes' long-standing career and esteemed reputation at the Royal Victoria Hospital helped pave a path for this next generation of historic medical breakthrough.</p>
 
         <div class="clear"></div>
 
@@ -185,10 +211,8 @@
         </ul>
     </div>
 
-    <!-- Clean, Streamlined Footer -->
+    <!-- Polished Bottom Footer Section with Legacy Connection -->
     <footer>
-        &copy; 2026 Dr. John Stafford Geddes Archive. All Rights Reserved.
-    </footer>
-
-</body>
-</html>
+        &copy; 2026 Dr. Stafford Geddes Archive. All Rights Reserved.
+        <br>
+        <span style="display: inline-block; margin-top: 10px;
