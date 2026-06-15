@@ -46,8 +46,10 @@
           "givenName": "William",
           "additionalName": "Billy",
           "alternateName": ["William Stafford Geddes", "Billy Stafford Geddes", "Dr. Stafford Geddes"],
+          "birthDate": "1891-01-24",
+          "deathDate": "1969-05-14",
           "jobTitle": "Consultant Anaesthetist",
-          "description": "Consultant Anaesthetist at the Royal Victoria Hospital, Belfast, and author of early clinical research on barbiturate poisoning. Born William Stafford Geddes, known to family as 'Billy' and professionally as Stafford Geddes.",
+          "description": "Consultant Anaesthetist at the Royal Victoria Hospital, Belfast, and the first dedicated anaesthetist on the island of Ireland. Born William Stafford Geddes, known to family as 'Billy' and professionally as Stafford Geddes. Also author of early clinical research on barbiturate poisoning.",
           "url": "https://drjohnsgeddes.github.io/stafford-geddes/",
           "image": "https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg",
           "knowsAbout": ["Anaesthesia", "Medicine", "Royal Victoria Hospital", "Barbiturate Poisoning Treatment"],
@@ -79,43 +81,60 @@
         /* Matching Popsie's Page Banner Architecture */
         .blue-banner-top {
             position: relative;
-            background-color: #1e5bb8;
+            background-color: #1e5bb8; /* Matching the vibrant royal blue color */
             color: white;
-            padding: 40px 20px;
             text-align: center;
+            padding: 60px 20px 40px;
             border-bottom: 5px solid #164da0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 60px;
+            overflow: hidden;
         }
         
         .banner-title {
             font-weight: bold;
-            font-size: 32px;
+            font-size: 3em;
             letter-spacing: 0.5px;
-            max-width: 60%;
+            margin: 0;
             z-index: 2;
+            position: relative;
+        }
+
+        .banner-dates {
+            font-size: 1.4em;
+            margin: 10px 0 0;
+            opacity: 0.9;
+            z-index: 2;
+            position: relative;
+        }
+
+        .banner-tagline {
+            font-size: 1.4em;
+            margin: 10px 0 0;
+            opacity: 0.9;
+            font-style: italic;
+            z-index: 2;
+            position: relative;
         }
 
         /* Icons matching Popsie's page exactly (Font Awesome stethoscope & heart-pulse) */
         .header-icon-left,
         .header-icon-right {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 48px;
+            top: 20px;
+            font-size: 5em;
             color: #ffffff;
-            opacity: 0.85;
-            z-index: 2;
+            opacity: 0.7;
+            z-index: 1;
         }
 
         .header-icon-left {
-            left: 30px;
+            left: 20px;
         }
 
         .header-icon-right {
-            right: 30px;
+            right: 20px;
         }
         
         .container {
@@ -161,19 +180,47 @@
             text-decoration: underline;
             font-weight: bold;
         }
+
+        /* Responsive Breakpoint matching Popsie's page */
+        @media (max-width: 600px) {
+            .blue-banner-top {
+                padding: 30px 15px 30px;
+            }
+            .banner-title {
+                font-size: 2.2em;
+                margin-top: 15px;
+            }
+            .banner-dates,
+            .banner-tagline {
+                font-size: 1.1em;
+            }
+            .header-icon-left,
+            .header-icon-right {
+                position: static;
+                font-size: 2.2em;
+                opacity: 0.9;
+                margin: 5px;
+            }
+            .icon-wrapper {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Precision Header Box with Embedded Medical Graphics -->
     <div class="blue-banner-top">
-        <!-- Left Corner: Stethoscope (matches companion archive) -->
-        <i class="fas fa-stethoscope header-icon-left"></i>
+        <div class="icon-wrapper">
+            <i class="fas fa-stethoscope header-icon-left"></i>
+            <i class="fas fa-heart-pulse header-icon-right"></i>
+        </div>
 
         <div class="banner-title">Dr. Stafford Geddes Archive</div>
-
-        <!-- Right Corner: Heart Pulse (matches companion archive) -->
-        <i class="fas fa-heart-pulse header-icon-right"></i>
+        <div class="banner-dates">24 January 1891 – 14 May 1969</div>
+        <div class="banner-tagline">1st Dedicated Anaesthetist on the Island of Ireland</div>
     </div>
 
     <div class="container">
@@ -215,4 +262,10 @@
     <footer>
         &copy; 2026 Dr. Stafford Geddes Archive. All Rights Reserved.
         <br>
-        <span style="display: inline-block; margin-top: 10px;
+        <span style="display: inline-block; margin-top: 10px; font-size: 13px;">
+            Visit the companion archive: <a href="https://drjohnsgeddes.github.io/archive/">Dr. John Stafford Geddes Archive</a>
+        </span>
+    </footer>
+
+</body>
+</html>
