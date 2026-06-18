@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,11 +83,11 @@
 
         .header-icon-left, .header-icon-right { position: absolute; top: 50%; transform: translateY(-50%); font-size: 5em; color: #ffffff; opacity: 0.25; z-index: 1; }
         .header-icon-left { left: 40px; }
-        .header-icon-right { right: 40px; }
         
-        /* Subtle styling for the hidden easter egg image link */
-        .secret-link { color: inherit; text-decoration: none; cursor: default; }
-        .secret-link:hover { opacity: 0.5; cursor: pointer; }
+        /* Updated header easter egg element styling to behave seamlessly with the lightbox */
+        .header-icon-right { right: 40px; transition: opacity 0.2s ease; }
+        .header-icon-right.clickable-img { cursor: default; }
+        .header-icon-right.clickable-img:hover { opacity: 0.5; transform: translateY(-50%) scale(1.02); box-shadow: none; }
 
         .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
         
@@ -99,7 +100,7 @@
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
         }
-        .clickable-img:hover {
+        img.clickable-img:hover {
             transform: scale(1.015);
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
             opacity: 0.95;
@@ -162,6 +163,7 @@
             .banner-dates { font-size: 1.1em; }
             .banner-tagline { font-size: 1.1em; }
             .header-icon-left, .header-icon-right { position: static; transform: none; font-size: 2.2em; opacity: 0.8; margin: 5px; }
+            .header-icon-right.clickable-img:hover { transform: scale(1.02); }
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; }
             .grad-pic-container, .plaque-pic-container { float: none; margin: 0 auto 20px; max-width: 240px; }
             .profile-pic { float: none; display: block; margin: 0 auto 20px; max-width: 100%; }
@@ -174,10 +176,8 @@
     <div class="blue-banner-top">
         <div class="icon-wrapper">
             <i class="fas fa-stethoscope header-icon-left"></i>
-            <!-- Invisible interactive node wrapped around the heart logo icon pointing to the colorized artifact -->
-            <a href="wsg2.jpg" target="_blank" class="secret-link" title="A glimpse through time...">
-                <i class="fas fa-heart-pulse header-icon-right"></i>
-            </a>
+            <!-- The heart icon now possesses data targets allowing it to trip the interactive lightbox overlay directly -->
+            <i class="fas fa-heart-pulse header-icon-right clickable-img" data-src="wsg2.jpg" data-alt="Colourised Graduation Portrait" title="A glimpse through time..."></i>
         </div>
         <div class="banner-title">Dr. Stafford Geddes Archive</div>
         <div class="banner-dates">24 January 1891 – 14 May 1969</div>
@@ -216,12 +216,12 @@
         <h3>Early Clinical Research & Toxicology</h3>
         <p>Beyond his daily theatre duties, Dr. Geddes actively contributed to early medical literature, focusing on critical care and toxicology. Notably, he published foundational work in <em>The British Medical Journal</em> (BMJ) regarding the clinical treatment and management of acute barbiturate poisoning—a severe and recurring medical emergency in mid-20th-century medicine.</p>
 
-        <h3>A Lasting Medical Legacy</h3>
+        <h3> A Lasting Medical Legacy</h3>
         <p>In addition to his direct clinical impact, Dr. Geddes established a profound family legacy within international medicine. He was the father of <strong>Dr. John Stafford Geddes</strong> (1939–2024), the pioneering Northern Irish cardiologist who, alongside Professor Frank Pantridge at the Royal Victoria Hospital, co-developed the world's first mobile coronary care unit (the Belfast "Flying Squad") and revolutionized pre-hospital cardiac care with the portable defibrillator. Dr. Stafford Geddes' long-standing career and esteemed reputation at the Royal Victoria Hospital helped pave a path for this next generation of historic medical breakthrough.</p>
 
         <div class="clear"></div>
 
-        <!-- NEW SECTION: Personal Practice & Residence featuring the Brass Door Plaque -->
+        <!-- Personal Practice & Residence featuring the Brass Door Plaque -->
         <h2>Personal Practice & Residence</h2>
         <div class="plaque-pic-container">
             <img src="wsg3.jpg" alt="Dr. Stafford Geddes Brass Practice Plaque" class="plaque-pic clickable-img" title="Click to view full screen">
@@ -271,12 +271,17 @@
                 }
             }
 
-            // Loop and attach state controllers to all image tags on the page
-            clickableImages.forEach(function(image) {
-                image.addEventListener('click', function() {
-                    lightboxTarget.src = this.src;
-                    lightboxTarget.alt = this.alt;
+            // Loop and attach state controllers to all elements with the .clickable-img class
+            clickableImages.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    // Check if it's an image element or a custom data-targeted icon asset
+                    var sourceUrl = this.tagName === 'IMG' ? this.src : this.getAttribute('data-src');
+                    var altText = this.tagName === 'IMG' ? this.alt : this.getAttribute('data-alt');
+                    
+                    lightboxTarget.src = sourceUrl;
+                    lightboxTarget.alt = altText;
                     lightbox.classList.add('active');
+                    
                     // Push fake state tracking token to browser history stack
                     history.pushState({lightbox: true}, null, '#view-document');
                 });
