@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +6,27 @@
     <title>Dr. Stafford Geddes | Consultant Anaesthetist Legacy</title>
     <meta name="description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
 
-    <!-- Google Site Verification Tag for Search Console -->
     <meta name="google-site-verification" content="google3bafb564968c6e31" />
 
-    <!-- Favicon Link -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://drjohnsgeddes.github.io/stafford-geddes/">
 
-    <!-- Hidden Search Engine Optimization Links -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Dr. Stafford Geddes | Consultant Anaesthetist Legacy">
     <meta property="og:description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
     <meta property="og:url" content="https://drjohnsgeddes.github.io/stafford-geddes/">
     <meta property="og:image" content="https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dr. Stafford Geddes | Consultant Anaesthetist Legacy">
     <meta name="twitter:description" content="Historical archive documenting the medical contributions of Dr. Stafford Geddes, Consultant Anaesthetist at the Royal Victoria Hospital, Belfast.">
     <meta name="twitter:image" content="https://drjohnsgeddes.github.io/stafford-geddes/StaffordGeddes.jpg">
 
-    <!-- Google Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,7 +62,6 @@
     }
     </script>
 
-    <!-- Font Awesome (for header icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -81,13 +72,14 @@
         .banner-dates { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; z-index: 2; position: relative; }
         .banner-tagline { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; font-style: italic; z-index: 2; position: relative; }
 
-        .header-icon-left, .header-icon-right { position: absolute; top: 50%; transform: translateY(-50%); font-size: 5em; color: #ffffff; opacity: 0.25; z-index: 1; }
-        .header-icon-left { left: 40px; }
+        /* Synchronized with Popsie's exact header icon dimensions, bolder opacity, and higher positioning values */
+        .header-icon-left, .header-icon-right { position: absolute; top: 20px; font-size: 5em; color: #ffffff; opacity: 0.7; z-index: 1; }
+        .header-icon-left { left: 20px; }
         
-        /* Updated header easter egg element styling to behave seamlessly with the lightbox */
-        .header-icon-right { right: 40px; transition: opacity 0.2s ease; }
+        /* Updated header easter egg element styling to align perfectly while preserving dynamic interactions */
+        .header-icon-right { right: 20px; transition: opacity 0.2s ease, transform 0.2s ease; }
         .header-icon-right.clickable-img { cursor: default; }
-        .header-icon-right.clickable-img:hover { opacity: 0.5; transform: translateY(-50%) scale(1.02); box-shadow: none; }
+        .header-icon-right.clickable-img:hover { opacity: 0.5; transform: scale(1.02); box-shadow: none; }
 
         .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
         
@@ -172,11 +164,9 @@
 </head>
 <body>
 
-    <!-- Precision Header Box with Embedded Medical Graphics -->
     <div class="blue-banner-top">
         <div class="icon-wrapper">
             <i class="fas fa-stethoscope header-icon-left"></i>
-            <!-- The heart icon now possesses data targets allowing it to trip the interactive lightbox overlay directly -->
             <i class="fas fa-heart-pulse header-icon-right clickable-img" data-src="wsg2.jpg" data-alt="Colourised Graduation Portrait" title="A glimpse through time..."></i>
         </div>
         <div class="banner-title">Dr. Stafford Geddes Archive</div>
@@ -185,7 +175,6 @@
     </div>
 
     <div class="container">
-        <!-- Granddad's Portrait (Integrated directly into the text flow) -->
         <img src="StaffordGeddes.jpg" alt="Dr. Stafford Geddes" class="profile-pic clickable-img" title="Click to view full screen">
 
         <h1>Dr. Stafford Geddes (Consultant Anaesthetist)</h1>
@@ -200,7 +189,6 @@
 
         <h2>Historical Context & Medical Contributions</h2>
         
-        <!-- Interactive Section Integration: Early Life with Left-Aligned Photo & Text Wrapping -->
         <h3>Early Life & Education</h3>
         <div class="grad-pic-container">
             <img src="wsg1.jpg" alt="Stafford Geddes Graduation Portrait" class="grad-pic clickable-img" title="Click to view full screen">
@@ -221,7 +209,6 @@
 
         <div class="clear"></div>
 
-        <!-- Personal Practice & Residence featuring the Brass Door Plaque -->
         <h2>Personal Practice & Residence</h2>
         <div class="plaque-pic-container">
             <img src="wsg3.jpg" alt="Dr. Stafford Geddes Brass Practice Plaque" class="plaque-pic clickable-img" title="Click to view full screen">
@@ -239,7 +226,6 @@
         </ul>
     </div>
 
-    <!-- Polished Bottom Footer Section with Legacy Connection -->
     <footer>
         &copy; 2026 Dr. Stafford Geddes Archive. All Rights Reserved.
         <br>
@@ -248,12 +234,10 @@
         </span>
     </footer>
 
-    <!-- REUSABLE LIGHTBOX STRUCTURE -->
     <div id="lightbox" class="lightbox-overlay">
         <img id="lightboxTarget" class="lightbox-img" src="" alt="Expanded View">
     </div>
 
-    <!-- ADVANCED MULTI-IMAGE HISTORY CONTROLLER -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var lightbox = document.getElementById('lightbox');
