@@ -160,6 +160,22 @@
             .grad-pic-container, .plaque-pic-container { float: none; margin: 0 auto 20px; max-width: 240px; }
             .profile-pic { float: none; display: block; margin: 0 auto 20px; max-width: 100%; }
         }
+
+        /* NATIVE DARK THEME SUPPORT FOR DR. STAFFORD GEDDES ARCHIVE */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #121212; color: #e0e0e0; }
+            .blue-banner-top { background-color: #0b223a; border-bottom: 5px solid #071729; }
+            .container { background: #1e1e1e; border: 1px solid #2d2d2d; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+            h1 { border-bottom: 1px solid #334155; color: #4fa3ff; }
+            h2 { border-bottom: 1px solid #334155; color: #4fa3ff; }
+            h3 { color: #e0e0e0; }
+            p strong { color: #ffffff; }
+            .profile-pic { border: 3px solid #4fa3ff; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+            .grad-pic, .plaque-pic { border: 1px solid #334155; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+            .grad-caption, .plaque-caption { color: #a0aec0; }
+            footer { background-color: #0b223a; border-top: 5px solid #071729; }
+            footer a { color: #90caf9; }
+        }
     </style>
 </head>
 <body>
